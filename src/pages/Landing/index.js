@@ -16,7 +16,7 @@ function LandingPage(){
           <button className="py-3 px-5 rounded-lg my-2 mx-6">See Menu</button>
         </div>
         <div className="flex-auto">
-          <img className="w-96 block" src="/assets/img/burger.png"/>
+          <img className="w-80 mx-auto block" src="/assets/img/food-landing.png"/>
         </div>
       </div>
       <BookTable />
