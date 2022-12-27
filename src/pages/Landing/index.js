@@ -2,12 +2,12 @@ import BookTable from "./bookTable"
 
 function LandingPage(){
   return (
-    <div className="py-5 px-16">
+    <div className="py-2 px-28">
       <div className="flex">
         <div className="flex-auto">
           <h3 className="font-medium my-2">EASY WAY TO ORDER YOUR FOOD</h3>
           <h1 className="text-6xl font-bold">
-            Choosing Healthy <br/>& Fresh Food
+            Choose Healthy <br/>& Fresh Food
           </h1>
           <p className="my-2">
             Just confirm your order and enjoy our delicious fastest delivery.

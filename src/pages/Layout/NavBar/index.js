@@ -4,7 +4,7 @@ import MenuItems from "./menuItems"
 
 function NavBar(){
   return (
-    <div className="p-8 flex">
+    <div className="p-4 flex">
       <Logo />
       <MenuItems />
       <AuthButtons />
