@@ -1,6 +1,6 @@
 function MenuItems(){
   return (
-    <div className="flex-1 ml-8">
+    <div className="flex-1 ml-16">
       <ul className="flex justify-center">
         <li className="px-6 py-3 cursor-pointer">
           Find Food
