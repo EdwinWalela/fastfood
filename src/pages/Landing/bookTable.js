@@ -1,6 +1,6 @@
 function BookTable(){
   return (
-    <div className="mb-8">
+    <div className="mb-12">
       <h2 className="mb-4 font-medium text-lg">Book A Table</h2>
       <form className="w-11/12 bg-white rounded-md shadow-lg py-4">
         <div className="flex justify-center p-4">

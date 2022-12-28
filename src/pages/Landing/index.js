@@ -1,4 +1,3 @@
-import Footer from "../Layout/Footer"
 import BookTable from "./bookTable"
 
 function LandingPage(){
@@ -23,7 +22,6 @@ function LandingPage(){
         </div>
         <BookTable />
       </div>
-      <Footer />
     </>
   )
 }
