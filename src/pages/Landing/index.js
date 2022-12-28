@@ -14,7 +14,6 @@ function LandingPage(){
               Just confirm your order and enjoy our delicious fastest delivery.
             </p>
             <button className="bg-black text-white py-3 px-5 rounded-lg my-2">Order Now</button>
-            <button className="py-3 px-5 rounded-lg my-2 mx-6">See Menu</button>
           </div>
           <div className="flex-auto">
             <img className="w-80 mx-auto block" src="/assets/img/food-landing.png"/>

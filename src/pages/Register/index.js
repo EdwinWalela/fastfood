@@ -1,4 +1,6 @@
-function RegisterPage(){
+
+
+const RegisterPage = () => {
   return (
     <>
       <section className="">
