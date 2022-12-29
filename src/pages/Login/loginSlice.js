@@ -9,8 +9,9 @@ export const loginSlice = createSlice({
   name:'login',
   initialState,
   reducers:{
-    login:(state)=>{
-      console.log(state)
+    login:(state,action)=>{
+      // send to api
+      console.log(action.payload)
     }
   }
 })
