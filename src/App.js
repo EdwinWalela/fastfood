@@ -1,4 +1,5 @@
-import './App.css';
+
+import { Routes, Route } from 'react-router-dom'
 import NavBar from './pages/Layout/NavBar';
 import LandingPage from './pages/Landing';
 import LoginPage from './pages/Login';
@@ -9,9 +10,12 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <LoginPage /> */}
-      {/* <RegisterPage /> */}
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />}/>
+        <Route path="/sign-in" element={<LoginPage />}/>
+        <Route path="/register" element={<RegisterPage />}/>
+        <Route path="*" element={<p>Not Found</p>}/>
+      </Routes>
       <Footer />
     </div>
   );
