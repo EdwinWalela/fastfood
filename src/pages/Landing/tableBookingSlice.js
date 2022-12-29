@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  date: new Date(),
-  time: new Date().getTime(),
+  date: '',
+  time: '',
   email: ''
 }
 
@@ -11,7 +11,9 @@ export const tableBookingSlice = createSlice({
   initialState,
   reducers:{
     bookTable:(state,action)=>{
-      console.log(action)
+      alert('Booking submitted successfully')
+      // send to API
+      console.log(action.payload)
     }
   }
 })

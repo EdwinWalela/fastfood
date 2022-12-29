@@ -1,8 +1,7 @@
 import BookTable from "./bookTable"
 
-function LandingPage(){
+const LandingPage = () =>{
   return (
-    <>
       <div className="py-2 px-28 mb-8">
         <div className="flex">
           <div className="flex-auto">
@@ -21,7 +20,6 @@ function LandingPage(){
         </div>
         <BookTable />
       </div>
-    </>
   )
 }
 
