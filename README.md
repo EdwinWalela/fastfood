@@ -1,4 +1,5 @@
 # FastFood Restaurant
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cf126e46-6363-4a70-b586-441321a84da6/deploy-status)](https://app.netlify.com/sites/storied-kashata-d53fba/deploys)
 
 A frontend application for a fictional restaurant
 
