@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { registerUser } from './registerSlice'
 
@@ -10,7 +11,7 @@ const RegisterPage = () => {
   const [termsAndCondition,setTermsAndConditions] = useState(false)
   const [passwordValid, setPasswordValid] = useState(false)
   const [passwordError, setPasswordError] = useState('')
-  const [emailValid, setEmailError] = useState(false)
+  const [emailValid, setEmailError] = useState(true)
 
   const dispatch = useDispatch();
 
@@ -35,10 +36,12 @@ const RegisterPage = () => {
   },[confirmPassword])
 
   useEffect(()=>{
-    if(email.includes('@') && email.includes('.')){
-      setEmailError(true)
-    }else{
-      setEmailError(false)
+    if(email){
+      if(email.includes('@') && email.includes('.')){
+        setEmailError(true)
+      }else{
+        setEmailError(false)
+      }
     }
   },[email])
 
@@ -105,7 +108,7 @@ const RegisterPage = () => {
                         </div>
                         <button type="submit" className="w-full bg-black text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
                         <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                            Already have an account? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>
+                            Already have an account? <Link to="/sign-in" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
                         </p>
                     </form>
                 </div>
