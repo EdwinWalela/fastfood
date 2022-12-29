@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux"
 import { login } from "./loginSlice"
 
 const LoginPage = () =>{
-
   const [email,setEmail] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch()
@@ -20,8 +19,6 @@ const LoginPage = () =>{
   function updatePassword(e){
     setPassword(e.target.value);
   }
-
-
 
   return (
     <>
