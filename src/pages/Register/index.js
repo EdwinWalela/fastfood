@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { registerUser } from './registerSlice'
 
 const RegisterPage = () => {
@@ -66,7 +66,6 @@ const RegisterPage = () => {
     }));
   }
 
-  
   return (
     <>
       <section className="">
