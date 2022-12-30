@@ -31,7 +31,7 @@ const Menu = () =>{
     <div className="my-2">
       <h1 className="text-3xl font-bold text-center">Our Fresh Menu</h1>
       <MenuTabs />
-      <MenuList />
+      <MenuList menu={menu}/>
     </div>
   )
 }

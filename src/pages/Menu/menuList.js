@@ -1,11 +1,11 @@
 import MenuListItem from "./menuListItem";
 
-const MenuList = () =>{
+const MenuList = (props) =>{
+  console.log(props.menu)
   return (
     <div className="mt-2 mb-8 px-14 flex flex-wrap">
-        <MenuListItem />
-        <MenuListItem />
-        <MenuListItem />
+        {props.menu.map((item,k)=><MenuListItem key={k} menuItem={item}/>)}
+       
     </div>
   )
 }
