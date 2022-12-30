@@ -1,12 +1,10 @@
+import MenuTabs from "./menuTabs"
+
 const Menu = () =>{
   return (
     <div className="my-2">
       <h1 className="text-3xl font-bold text-center">Our Fresh Menu</h1>
-      <div className="flex justify-center my-6">
-        <button className="bg-black text-white py-1  px-6 mx-6 rounded-full my-2">Salads</button>
-        <button className="border-black border-2  py-1  px-6 mx-6 rounded-full my-2">Dishes</button>
-        <button className="border-black border-2 py-1  px-6 mx-6 rounded-full my-2">Deserts</button>
-      </div>
+      <MenuTabs />
       <div className="mt-2 mb-8 px-14 flex justify-center">
         <div className="shadow-md bg-white py-6 mx-8 text-center w-80 rounded-lg">
           <h3 className="text-left bg-black text-white pl-6 py-1 rounded-tr-md rounded-br-md w-1/3">KES 300</h3>
