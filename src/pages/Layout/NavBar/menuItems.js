@@ -10,7 +10,7 @@ const MenuItems = () =>{
           About Us
         </NavLink>
         <NavLink 
-          to="/menu/dishes" 
+          to="/menu" 
           className={({isActive})=> isActive ? "px-6 py-3 font-medium cursor-pointer": "px-6 py-3 cursor-pointer"}>
           Our Menu
         </NavLink>

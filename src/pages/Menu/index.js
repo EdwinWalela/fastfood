@@ -6,6 +6,8 @@ const Menu = () =>{
   const location = useLocation()
 
   let category = location.pathname.split("/")[2]
+  // use category to fetch data
+  // console.log(category)
 
   return (
     <div className="my-2">
