@@ -11,13 +11,13 @@ const salads = [
     thumbnail:"/assets/img/landing-cover.png",
     price:550,
     title:"Swahili Salad",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    description:"Well Marinated In Ginger, Garlic, Soy Sauce; Pan Fried With A Sprinkle Of Spring Onions "
   },
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:400,
     title:"French Salad",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    description:"Finely Cut Juliennes Of Onions, De-Seeded Tomatoes, Gree Capsicum"
   }
 ]
 
@@ -25,20 +25,20 @@ const dishes = [
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:1300,
-    title:"Dish 1",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Chicken Wings",
+    description:"Well Marinated In Ginger, Garlic, Soy Sauce; Pan Fried With A Sprinkle Of Spring Onions"
   },
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:1550,
-    title:"Dish 2",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Tsiswa",
+    description:"Roasted On A Dry Pan With The Traditional Emulsifying Salt. Seasonal Delicacy Harvested Mainly During The Rainy Season"
   },
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:990,
-    title:"Dish 3",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Sweet Potatos",
+    description:"Macedoine Of Sweet Potato Mixed With Finely Chopped Red Onions And Garnished With Paysanne Of Colored Peppers"
   }
 ]
 
@@ -46,20 +46,20 @@ const deserts = [
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:250,
-    title:"Desert 1",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Kaimati Swahili Sweets",
+    description:"Derived From Wheat Flour, Cardamons, Yeast And Sugar"
   },
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:900,
-    title:"Desert 2",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Halua",
+    description:"Swahili Sweets; Commonly Served During Swahili Weddings"
   },
   {
     thumbnail:"/assets/img/landing-cover.png",
     price:580,
-    title:"Desert 3",
-    description:"Quality Greek kalamata olives and creamy feta cheese, made from sheep’s milk"
+    title:"Kachumbari Salad",
+    description:"Washed In Fresh Lemon Juice And Served On A Bed Of Fresh Garden Lettuce"
   }
 ]
 

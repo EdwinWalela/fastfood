@@ -19,13 +19,12 @@ const Menu = () =>{
   },
   [])
 
-  const menu = useSelector((state)=>state.menu[category])
+  const menu = useSelector((state)=>state.menu[category]) ?? []
 
   useEffect(()=>{
     dispatch(fetchMenu(category))
   }
   ,[menu])
-
 
   return (
     <div className="my-2">
