@@ -1,13 +1,31 @@
 import MenuTabs from "./menuTabs"
 import MenuList from "./menuList"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux"
+import { fetchMenu } from "./menuSlice"
+import { useEffect } from "react"
 
 const Menu = () =>{
-  const location = useLocation()
+  const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  let category = location.pathname.split("/")[2] 
+  let categories = ['salads','dishes','deserts']
 
-  let category = location.pathname.split("/")[2]
-  // use category to fetch data
-  // console.log(category)
+  useEffect(()=>{
+    if(!categories.includes(category)){
+      navigate(`${categories[0]}`,{replace:true})
+    }
+  },
+  [])
+
+  const menu = useSelector((state)=>state.menu[category])
+
+  useEffect(()=>{
+    dispatch(fetchMenu(category))
+  }
+  ,[menu])
+
 
   return (
     <div className="my-2">
