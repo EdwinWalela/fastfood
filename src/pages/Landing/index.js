@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import BookTable from "./bookTable"
 
 const LandingPage = () =>{
@@ -12,7 +13,9 @@ const LandingPage = () =>{
             <p className="my-2">
               Just confirm your order and enjoy our delicious fastest delivery.
             </p>
-            <button className="bg-black text-white py-3 px-5 rounded-lg my-2">Order Now</button>
+            <Link to="/menu">
+              <button className="bg-black text-white py-3 px-5 rounded-lg my-2">Order Now</button>
+            </Link>
           </div>
           <div className="flex-auto">
             <img className="w-80 mx-auto block" src="/assets/img/food-landing.png"/>

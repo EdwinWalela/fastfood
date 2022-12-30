@@ -17,9 +17,7 @@ function App() {
         <Route path="/sign-in" element={<LoginPage />}/>
         <Route path="/register" element={<RegisterPage />}/>
         <Route path="/menu/*">
-          <Route path="salads" element={<MenuPage />}/>
-          <Route path="dishes" element={<MenuPage />}/>
-          <Route path="deserts" element={<MenuPage />}/>
+          <Route path=":category" element={<MenuPage />}/>
           <Route path="*" element={<MenuRedirect />}/>
         </Route>
         <Route path="*" element={<p>Not Found</p>}/>
