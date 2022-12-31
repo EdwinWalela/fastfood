@@ -1,4 +1,6 @@
-const MenuListItem = (props) =>{
+import type { MenuItem } from "./menuSlice";
+
+const MenuListItem = (props:{item:MenuItem}) =>{
   return (
     <div className="shadow-md bg-white py-6 mx-8 my-4 text-center w-80 rounded-lg">
       <h3 className="text-left bg-black text-white pl-6 py-1 rounded-tr-md rounded-br-md w-1/3">KES {props.item.price}</h3>

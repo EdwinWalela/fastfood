@@ -1,4 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+
+export interface MenuItem {
+  thumbnail: string,
+  price: number,
+  title: string,
+  description: string
+}
+
+interface MenuState {
+  salads: MenuItem[],
+  dishes: MenuItem[],
+  deserts: MenuItem[],
+}
 
 const salads = [
   {
@@ -67,13 +80,13 @@ const initialState = {
   salads:[],
   dishes:[],
   deserts:[]
-}
+} as MenuState
 
 const menuSlice = createSlice({
   name:'menu',
   initialState,
   reducers:{
-    fetchMenu:(state,action)=>{
+    fetchMenu:(state,action:PayloadAction<string>)=>{
       switch (action.payload) {
         case "salads":
           return {

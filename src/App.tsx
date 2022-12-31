@@ -1,11 +1,11 @@
 
 import { Routes, Route } from 'react-router-dom'
-import NavBar from './pages/Layout/NavBar';
-import LandingPage from './pages/Landing';
-import LoginPage from './pages/Login';
-import RegisterPage from './pages/Register';
-import MenuPage from './pages/Menu'
-import Footer from "./pages/Layout/Footer"
+import NavBar from './pages/Layout/NavBar/index';
+import LandingPage from './pages/Landing/index';
+import LoginPage from './pages/Login/index';
+import RegisterPage from './pages/Register/index';
+import MenuPage from './pages/Menu/index'
+import Footer from "./pages/Layout/Footer/index"
 import MenuRedirect from './pages/Menu/menuRedirect';
 
 function App() {

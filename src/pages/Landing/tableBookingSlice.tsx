@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+interface TableBookingState {
+  date: string,
+  time: string,
+  email: string
+}
+
+const initialState:TableBookingState = {
   date: '',
   time: '',
   email: ''
@@ -10,7 +17,7 @@ export const tableBookingSlice = createSlice({
   name:'table booking',
   initialState,
   reducers:{
-    bookTable:(state,action)=>{
+    bookTable:(state,action:PayloadAction<TableBookingState>)=>{
       alert('Booking submitted successfully')
       // send to API
       console.log(action.payload)

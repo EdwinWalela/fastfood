@@ -1,14 +1,14 @@
 import MenuTabs from "./menuTabs"
 import MenuList from "./menuList"
 import { useLocation, useNavigate } from "react-router-dom"
-import { useSelector, useDispatch } from "react-redux"
+import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { fetchMenu } from "./menuSlice"
 import { useEffect } from "react"
 
 const Menu = () =>{
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   let category = location.pathname.split("/")[2] 
   let categories = ['salads','dishes','deserts']
 
@@ -19,7 +19,18 @@ const Menu = () =>{
   },
   [])
 
-  const menu = useSelector((state)=>state.menu[category]) ?? []
+  const menu = useAppSelector((state)=>{
+    switch (category) {
+      case "salads":
+          return state.menu.salads
+      case "dishes":
+        return state.menu.dishes
+      case "deserts":
+        return state.menu.deserts
+      default:
+        return [];
+    }
+  })
 
   useEffect(()=>{
     dispatch(fetchMenu(category))

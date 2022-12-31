@@ -2,7 +2,7 @@ import AuthButtons from "./authButtons"
 import Logo from "./logo"
 import MenuItems from "./menuItems"
 
-function NavBar(){
+const NavBar = () => {
   return (
     <div className="p-4 flex">
       <Logo />

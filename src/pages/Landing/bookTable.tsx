@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { bookTable } from './tableBookingSlice'
-import { useDispatch } from "react-redux"
+import { useAppDispatch } from '../../store/hooks'
+import { useAppSelector } from '../../store/hooks'
 
 const BookTable = () =>{
   const [date, setDate] = useState(()=>{
@@ -14,7 +15,7 @@ const BookTable = () =>{
   const [timeValid, setTimeValid] = useState(true);
   const [emailValid, setEmailValid] = useState(true);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(()=>{
     let selectedDate = new Date(date);
@@ -47,19 +48,19 @@ const BookTable = () =>{
    }
   },[email])
 
-  function updateDate(e){
-    setDate(e.target.value);
+  function updateDate(e:React.FormEvent<HTMLInputElement>){
+    setDate(e.currentTarget.value);
   }
 
-  function updateTime(e){
-    setTime(e.target.value);
+  function updateTime(e:React.FormEvent<HTMLInputElement>){
+    setTime(e.currentTarget.value);
   }
 
-  function updateEmail(e){
-    setEmail(e.target.value);
+  function updateEmail(e:React.FormEvent<HTMLInputElement>){
+    setEmail(e.currentTarget.value);
   }
 
-  function submitForm(e){
+  function submitForm(e:React.FormEvent){
     e.preventDefault();
     if(!dateValid){
       alert('Booking date should be at least one day in advance');

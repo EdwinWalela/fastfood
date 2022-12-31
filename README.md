@@ -4,7 +4,7 @@
 A frontend application for a fictional restaurant
 
 ## Tech Stack
-- ReactJS
+- ReactJS 
 - React redux (redux toolkit)
 - TailwindCSS
 
