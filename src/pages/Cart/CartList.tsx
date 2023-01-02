@@ -5,7 +5,6 @@ const CartList = () =>{
     <>
       <CartItem />
       <CartItem />
-      <CartItem />
     </>
   )
 }
