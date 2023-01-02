@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="p-4 flex">
       <Logo />
-      <MenuItems />
+      <MenuItems cartCount={100}/>
       <AuthButtons />
     </div>
   )
