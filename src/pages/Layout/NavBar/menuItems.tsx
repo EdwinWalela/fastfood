@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const MenuItems = () =>{
   return (
-    <div className="flex-1 ml-16">
+    <div className="flex-1 pl-24">
       <ul className="flex justify-center">
         <NavLink 
           to="/about-us" 
@@ -18,6 +18,11 @@ const MenuItems = () =>{
           to="/contact-us" 
           className={({isActive})=> isActive ? "px-6 py-3 font-medium cursor-pointer": "px-6 py-3 cursor-pointer"}>
           Contact Us
+        </NavLink>
+        <NavLink 
+          to="/cart" 
+          className={({isActive})=> isActive ? "px-6 py-3 font-medium cursor-pointer": "px-6 py-3 cursor-pointer"}>
+          Your Cart
         </NavLink>
       </ul>
     </div>
