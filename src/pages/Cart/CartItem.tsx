@@ -3,11 +3,15 @@ import { useAppDispatch } from '../../store/hooks';
 import { addToCart } from './cartSlice';
 import React from 'react';
 
-const CartItem = (props: { item: { item: MenuItem; quantity: number }; key: number }) => {
+const CartItem = (props: { item: { item: MenuItem; quantity: number }; index: number }) => {
 	const dispatch = useAppDispatch();
 
-	function handleAddToCart(id: number, category: string) {
+	function handleIncrementCart(id: number, category: string) {
 		dispatch(addToCart({ id, category }));
+	}
+
+	function handleDecrementCart(id: number, category: string) {
+		// dispatch();
 	}
 
 	return (
@@ -27,7 +31,14 @@ const CartItem = (props: { item: { item: MenuItem; quantity: number }; key: numb
 					</p>
 					<div className="flex justify-center">
 						<button className="bg-red-500 text-white px-3 rounded-lg my-2 mx-1">-</button>
-						<button className="bg-green-500 text-white px-2 rounded-lg my-2 mx-1">+</button>
+						<button
+							className="bg-green-500 text-white px-2 rounded-lg my-2 mx-1"
+							onClick={() => {
+								handleIncrementCart(props.index, 'salads');
+							}}
+						>
+							+
+						</button>
 					</div>
 				</div>
 			</div>

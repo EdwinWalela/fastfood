@@ -1,6 +1,8 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import type { MenuItem } from '../Menu/menuSlice';
 
+const MAX_ITEM_QUANTITY = 10;
+
 const salads = [
 	{
 		thumbnail: '/assets/img/landing-cover.png',
@@ -98,11 +100,18 @@ const menuSlice = createSlice({
 						item: salads[action.payload.id],
 						quantity: 1,
 					};
-					if (!state.items.includes(cartItem)) {
+					let exists = state.items.filter((item) => item.item.title == cartItem.item.title);
+					if (exists.length == 0) {
 						state.items.push(cartItem);
+					} else {
+						let index = state.items.indexOf(exists[0]);
+						if (state.items[index].quantity < MAX_ITEM_QUANTITY) {
+							state.items[index].quantity += 1;
+						} else {
+							// TODO: Show error
+						}
 					}
-					console.log(state);
-					return { ...state };
+					break;
 				case 'deserts':
 					cartItem = {
 						item: deserts[action.payload.id],
@@ -111,7 +120,7 @@ const menuSlice = createSlice({
 					if (!state.items.includes(cartItem)) {
 						state.items.push(cartItem);
 					}
-					return { ...state };
+					break;
 				case 'dishes':
 					cartItem = {
 						item: dishes[action.payload.id],
@@ -120,9 +129,8 @@ const menuSlice = createSlice({
 					if (!state.items.includes(cartItem)) {
 						state.items.push(cartItem);
 					}
-					return { ...state };
+					break;
 				default:
-					return { ...state };
 			}
 		},
 	},
