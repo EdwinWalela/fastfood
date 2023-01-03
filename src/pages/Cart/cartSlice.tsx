@@ -68,7 +68,7 @@ const deserts = [
 	},
 ];
 
-interface CartItem {
+export interface CartItem {
 	item: MenuItem;
 	quantity: number;
 }
@@ -78,7 +78,12 @@ interface CartState {
 }
 
 const initialState = {
-	items: [],
+	items: [
+		{
+			item: salads[0],
+			quantity: 1,
+		},
+	],
 } as CartState;
 
 const menuSlice = createSlice({

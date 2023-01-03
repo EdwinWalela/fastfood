@@ -1,12 +1,16 @@
-import CartItem from "./CartItem";
+import CartItem from './CartItem';
+import { useAppSelector } from '../../store/hooks';
 
-const CartList = () =>{
-  return (
-    <>
-      <CartItem />
-      <CartItem />
-    </>
-  )
-}
+const CartList = () => {
+	const cart = useAppSelector((state) => state.cart.items);
+
+	return (
+		<>
+			{cart.map((item) => (
+				<CartItem item={item} />
+			))}
+		</>
+	);
+};
 
 export default CartList;
