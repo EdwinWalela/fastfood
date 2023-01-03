@@ -6,8 +6,8 @@ const CartList = () => {
 
 	return (
 		<>
-			{cart.map((item) => (
-				<CartItem item={item} />
+			{cart.map((item, i) => (
+				<CartItem item={item} key={i} />
 			))}
 		</>
 	);

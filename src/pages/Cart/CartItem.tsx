@@ -1,6 +1,15 @@
 import type { MenuItem } from '../Menu/menuSlice';
+import { useAppDispatch } from '../../store/hooks';
+import { addToCart } from './cartSlice';
+import React from 'react';
 
-const CartItem = (props: { item: { item: MenuItem; quantity: number } }) => {
+const CartItem = (props: { item: { item: MenuItem; quantity: number }; key: number }) => {
+	const dispatch = useAppDispatch();
+
+	function handleAddToCart(id: number, category: string) {
+		dispatch(addToCart({ id, category }));
+	}
+
 	return (
 		<>
 			<div className="flex items-center px-3 my-6">
@@ -17,8 +26,8 @@ const CartItem = (props: { item: { item: MenuItem; quantity: number } }) => {
 						KES {props.item.item.price * props.item.quantity}
 					</p>
 					<div className="flex justify-center">
-						<button className="bg-red-500 text-white px-3 rounded-lg my-2 mx-1">+</button>
-						<button className="bg-green-500 text-white px-3 rounded-lg my-2 mx-1">-</button>
+						<button className="bg-red-500 text-white px-3 rounded-lg my-2 mx-1">-</button>
+						<button className="bg-green-500 text-white px-2 rounded-lg my-2 mx-1">+</button>
 					</div>
 				</div>
 			</div>

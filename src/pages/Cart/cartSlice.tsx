@@ -101,7 +101,8 @@ const menuSlice = createSlice({
 					if (!state.items.includes(cartItem)) {
 						state.items.push(cartItem);
 					}
-					return state;
+					console.log(state);
+					return { ...state };
 				case 'deserts':
 					cartItem = {
 						item: deserts[action.payload.id],
@@ -110,7 +111,7 @@ const menuSlice = createSlice({
 					if (!state.items.includes(cartItem)) {
 						state.items.push(cartItem);
 					}
-					return state;
+					return { ...state };
 				case 'dishes':
 					cartItem = {
 						item: dishes[action.payload.id],
@@ -119,9 +120,9 @@ const menuSlice = createSlice({
 					if (!state.items.includes(cartItem)) {
 						state.items.push(cartItem);
 					}
-					return state;
+					return { ...state };
 				default:
-					return state;
+					return { ...state };
 			}
 		},
 	},
