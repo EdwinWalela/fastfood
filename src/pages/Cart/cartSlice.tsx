@@ -70,22 +70,12 @@ const deserts = [
 	},
 ];
 
-export interface CartItem {
-	item: MenuItem;
-	quantity: number;
-}
-
 interface CartState {
-	items: CartItem[];
+	items: MenuItem[];
 }
 
 const initialState = {
-	items: [
-		{
-			item: salads[0],
-			quantity: 1,
-		},
-	],
+	items: [salads[0]],
 } as CartState;
 
 const menuSlice = createSlice({
@@ -93,42 +83,15 @@ const menuSlice = createSlice({
 	initialState,
 	reducers: {
 		addToCart: (state, action: PayloadAction<{ id: number; category: string }>) => {
-			let cartItem: CartItem;
 			switch (action.payload.category) {
 				case 'salads':
-					cartItem = {
-						item: salads[action.payload.id],
-						quantity: 1,
-					};
-					let exists = state.items.filter((item) => item.item.title == cartItem.item.title);
-					if (exists.length == 0) {
-						state.items.push(cartItem);
-					} else {
-						let index = state.items.indexOf(exists[0]);
-						if (state.items[index].quantity < MAX_ITEM_QUANTITY) {
-							state.items[index].quantity += 1;
-						} else {
-							// TODO: Show error
-						}
-					}
+					state.items.push(salads[action.payload.id]);
 					break;
 				case 'deserts':
-					cartItem = {
-						item: deserts[action.payload.id],
-						quantity: 1,
-					};
-					if (!state.items.includes(cartItem)) {
-						state.items.push(cartItem);
-					}
+					state.items.push(deserts[action.payload.id]);
 					break;
 				case 'dishes':
-					cartItem = {
-						item: dishes[action.payload.id],
-						quantity: 1,
-					};
-					if (!state.items.includes(cartItem)) {
-						state.items.push(cartItem);
-					}
+					state.items.push(dishes[action.payload.id]);
 					break;
 				default:
 			}

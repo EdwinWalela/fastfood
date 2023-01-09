@@ -6,7 +6,7 @@ const OrderSummary = () => {
 	const deliveryCost = 150;
 
 	for (const item of cart) {
-		subTotal += item.item.price * item.quantity;
+		subTotal += item.price;
 	}
 
 	const total = subTotal + deliveryCost;

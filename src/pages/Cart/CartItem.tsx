@@ -3,7 +3,7 @@ import { useAppDispatch } from '../../store/hooks';
 import { addToCart } from './cartSlice';
 import React from 'react';
 
-const CartItem = (props: { item: { item: MenuItem; quantity: number }; index: number }) => {
+const CartItem = (props: { item: MenuItem; index: number }) => {
 	const dispatch = useAppDispatch();
 
 	function handleIncrementCart(id: number, category: string) {
@@ -19,27 +19,11 @@ const CartItem = (props: { item: { item: MenuItem; quantity: number }; index: nu
 			<div className="flex items-center px-3 my-6">
 				<img className="w-16 mr-3" src="/assets/img/food-landing.png" />
 				<div className="flex-1 pr-4">
-					<h4 className="font-bold my-2 text-sm">
-						{props.item.item.title}
-						<span> x {props.item.quantity}</span>
-					</h4>
-					<p className="text-xs my-2">{props.item.item.description}</p>
+					<h4 className="font-bold my-2 text-sm">{props.item.title}</h4>
+					<p className="text-xs my-2">{props.item.description}</p>
 				</div>
 				<div className="">
-					<p className="font-medium text-sm pl-2">
-						KES {props.item.item.price * props.item.quantity}
-					</p>
-					<div className="flex justify-center">
-						<button className="bg-red-500 text-white px-3 rounded-lg my-2 mx-1">-</button>
-						<button
-							className="bg-green-500 text-white px-2 rounded-lg my-2 mx-1"
-							onClick={() => {
-								handleIncrementCart(props.index, 'salads');
-							}}
-						>
-							+
-						</button>
-					</div>
+					<p className="font-medium text-sm pl-2">KES {props.item.price}</p>
 				</div>
 			</div>
 			<div className="border mt-4"> </div>

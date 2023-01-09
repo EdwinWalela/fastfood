@@ -2,7 +2,6 @@ import AuthButtons from './authButtons';
 import Logo from './logo';
 import MenuItems from './menuItems';
 import { useAppSelector } from '../../../store/hooks';
-import { stat } from 'fs';
 
 const NavBar = () => {
 	const cart = useAppSelector((state) => state.cart.items);
