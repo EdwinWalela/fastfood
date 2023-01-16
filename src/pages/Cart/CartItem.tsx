@@ -19,8 +19,8 @@ const CartItem = (props: { item: MenuItem; index: number }) => {
 			<div className="flex items-center px-3 my-6">
 				<img className="w-16 mr-3" src="/assets/img/food-landing.png" />
 				<div className="flex-1 pr-4">
-					<h4 className="font-bold my-2 text-sm">{props.item.title}</h4>
-					<p className="text-xs my-2">{props.item.description}</p>
+					<h4 className="md:font-bold my-2 text-sm">{props.item.title}</h4>
+					<p className="text-xs my-2 hidden md:block">{props.item.description}</p>
 				</div>
 				<div className="">
 					<p className="font-medium text-sm pl-2">KES {props.item.price}</p>
