@@ -4,6 +4,10 @@
 
 A frontend application for a fictional restaurant
 
+### Responsive Design
+
+<img src="./docs/demo.png"/>
+
 ## Tech Stack
 
 - ReactJS (TypeScript)
